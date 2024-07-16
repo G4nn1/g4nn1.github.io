@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .calculator h1 {
+            color: #333;
+        }
+        .calculator p {
+            margin: 10px 0;
+        }
+        .calculator input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .calculator button {
+            box-shadow: 3px 4px 0px 0px #8a2a21;
+            background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+            background-color: #c62d1f;
+            border-radius: 18px;
+            border: 1px solid #d02718;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 17px;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #810e05;
+            transition: background 0.3s ease;
+        }
+        .calculator button:hover {
+            background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+            background-color: #f24437;
+        }
+        .calculator button:active {
+            position: relative;
+            top: 1px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        <input id="inp1" type="number" placeholder="Enter first number">
+        <input id="inp2" type="number" placeholder="Enter second number">
+        <div>
+            <button onclick="Plus()">+</button>
+            <button onclick="Minus()">-</button>
+            <button onclick="Multiply()">×</button>
+            <button onclick="Divide()">÷</button>
+        </div>
+    </div>
+    <script>
+        function Plus() {
+            var x = document.getElementById('inp1').value;
+            var xn = Number(x);
+            var y = document.getElementById('inp2').value;
+            var yn = Number(y);
+            var z = xn + yn;
+            alert(z);
+        }
+
+        function Minus() {
+            var x = document.getElementById('inp1').value;
+            var xn = Number(x);
+            var y = document.getElementById('inp2').value;
+            var yn = Number(y);
+            var z = xn - yn;
+            alert(z);
+        }
+
+        function Multiply() {
+            var x = document.getElementById('inp1').value;
+            var xn = Number(x);
+            var y = document.getElementById('inp2').value;
+            var yn = Number(y);
+            var z = xn * yn;
+            alert(z);
+        }
+
+        function Divide() {
+            var x = document.getElementById('inp1').value;
+            var xn = Number(x);
+            var y = document.getElementById('inp2').value;
+            var yn = Number(y);
+            var z = xn / yn;
+            alert(z);
+        }
+    </script>
+</body>
+</html>
